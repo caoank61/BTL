@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<windows.h>
+#include <conio.h>
 /*
 Y tuong them:
 	-Trong muc menu thay vi chi cho tim kiem bang the loai thi co the tim kiem bang ten
@@ -60,16 +61,16 @@ void XuatThongTinSach(book_st s1){
 	printf("\tThe loai: %s\n",s1.TheLoai);
 		printf("\n\t\t\t ");
 	printf("\tGia tien: %d\n",s1.GiaTien);
-	printf("\n-------------------------------------------------\n");
 }
 
 void XuatDS(book_st s1[], int n){
 	for(int i=1; i<=n;i++){
 		printf("\n\t\t\t ");
-		printf("      ~Thong tin cuon thu %d~ \n", i);
+		printf("\n      ~Thong tin cuon thu %d~ \n", i);
 		XuatThongTinSach(s1[i]);
 	}
 }
+
 void Menu(){
 	int chon, flat=1;
 	while(flat){
@@ -100,10 +101,13 @@ void Menu(){
 				system("cls");
 				break;
 			case 2:
+				system("cls");
 				printf("\n\t\t\t\t ");
 				printf("Thong tin sach: \n");
 				XuatDS(a,n);
-				printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+				printf("\nNhap phim bat ki de tiep tuc");
+				getch();
+				system("cls");
 				break;
 			case 3://dung so sanh chuoi 
 			case 4:
@@ -113,7 +117,7 @@ void Menu(){
 	}
 }
 int main(){
-	trangtri();	
+	//trangtri();	
 	system("cls");
 	Menu();
 }
