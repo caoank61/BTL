@@ -125,7 +125,7 @@ void Menu(){
 	}
 }
 int main(){
-	//trangtri();	
+	trangtri();	
 	system("cls");
 	Menu();
 }
