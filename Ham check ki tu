@@ -1,0 +1,8 @@
+void KiemTra(char &c){
+	if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
+	printf("\n\t\t\t\t");
+    printf("Vui long nhap lai!\n");
+    Sleep(1200);
+    }
+    system("cls");
+}
