@@ -25,7 +25,8 @@ void trangtri()
         printf("\n\n\t\t\t\t\Loading %d % ", i); 
         Sleep(35);
  }
- 	Sleep(600);
+// 	printf("\n\n\t\t\t\t\tMot san pham cua An ft T-Team.");
+ 	Sleep(2000);
 }
 
 void NhapThongTinSach(Sach &s1){
@@ -45,8 +46,8 @@ void NhapThongTinSach(Sach &s1){
 		
 }
 void NhapSoLuong(book_st s1[], int n){
-	for (int i=1;i<=n;i++){
-		printf("Cuon %d: \n",i);
+	for (int i=0;i<n;i++){
+		printf("%d: \n",i+1);
 		NhapThongTinSach(s1[i]);
 	}
 }
@@ -65,23 +66,30 @@ void XuatThongTinSach(book_st s1){
 
 void XuatDS(book_st s1[], int n){
 	for(int i=1; i<=n;i++){
-		printf("STT\t\t\t\t\t %d \n", i);
+		printf("\n\t\t\t ");
+		printf("\n      ~Thong tin cuon thu %d~ \n", i);
 		XuatThongTinSach(s1[i]);
 	}
 }
-void KiemTra(char &c){
-	if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
-	printf("\n\t\t\t\t");
-    printf("Vui long nhap lai!\n");
-    Sleep(1200);
-    }
-    system("cls");
-}
+void KiemTra(){
+	//int num;
+	char term;
+	if(scanf("%c", &term) == 2 || term == '\n'){
+		Sleep(100);
+		};
+	else{
+		printf("\t\t\t\t");
+		printf("Vui long nhap lai!");
+		Sleep(2000);
+		system("cls");
+	}
+}s
 void Menu(){
-	int flat=1; 
+	int flat=1;
 	char chon;
 	while(flat){
-		printf("-------------------------------------MENU-------------------------------------");
+		printf("_____________________________w_QUAN LY THU VIEN_w________________________________");
+		printf("\n-------------------------------------MENU-------------------------------------");
 		printf("\n\t\t\t ");
 		printf("1. Nhap  thong tin sach.\n");
 		printf("\t\t\t ");
@@ -94,8 +102,8 @@ void Menu(){
 		printf("5. Thoat.\n");
 		printf("============================Moi ban chon chuc nang============================");
 		printf("\n\t\t\t\t       ");
-		scanf("%c", &chon);
-		KiemTra(chon);
+		scanf("%d", &chon);
+		KiemTra();
 		switch(chon){
 			case 1: 
 				struct book_st a[100];
@@ -111,9 +119,9 @@ void Menu(){
 			case 2:
 				system("cls");
 				printf("\n\t\t\t\t ");
-				printf("THONG TIN SACH\n" );
+				printf("Thong tin sach: \n");
 				XuatDS(a,n);
-				printf("\nNhap phim bat ki de tiep tuc");
+				printf("\nNhan phim bat ki de tiep tuc");
 				getch();
 				system("cls");
 				break;
@@ -125,7 +133,7 @@ void Menu(){
 	}
 }
 int main(){
-	trangtri();	
+//	trangtri();	
 	system("cls");
 	Menu();
 }
