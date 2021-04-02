@@ -72,9 +72,9 @@ void XuatDS(book_st s1[], int n){
 	}
 }
 void KiemTra(){
-	//int num;
-	char term;
-	if(scanf("%c", &term) == 2 || term == '\n'){
+	//int n;
+	char c;
+	if(scanf("%c", &c) == 2 || c == '\n'){
 		Sleep(100);
 		};
 	else{
