@@ -1,8 +1,13 @@
-void KiemTra(char &c){
-	if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
-	printf("\n\t\t\t\t");
-    printf("Vui long nhap lai!\n");
-    Sleep(1200);
-    }
-    system("cls");
+void KiemTra(){
+	//int num;
+	char c;
+	if(scanf("%c", &c) == 2 || c == '\n'){
+		Sleep(100);
+		}
+	else{
+		printf("\t\t\t\t");
+		printf("Vui long nhap lai!");
+		Sleep(2000);
+		system("cls");
+	}
 }
